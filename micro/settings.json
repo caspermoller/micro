@@ -1,0 +1,8 @@
+{
+    "Tab": "Autocomplete|IndentSelection|InsertTab",
+    "ctrl-y": "Redo",
+    "ctrl-z": "Undo",
+    "mkparents": true,
+    "smartindent": true,
+    "tabtospaces": true
+}
