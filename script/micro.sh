@@ -18,6 +18,29 @@ echo "You can either choose to download and install Micro automatically, or just
 echo "Do you want Micro to be installed automatically? (y/N)"
 read -r INSTALL_CHOICE
 
+# Function to download settings
+download_settings() {
+    DESTINATION="/home/$SUDO_USER/.config/micro"
+    # create folder if not exist
+    echo "Echo: $SUDO_USER"
+    sudo -u $SUDO_USER mkdir -p "$DESTINATION"
+
+    # download init.lua and place it in destination
+    if ! sudo -u $SUDO_USER curl https://raw.githubusercontent.com/caspermoller/micro/main/settings/init.lua -o "$DESTINATION/init.lua"; then
+        echo "Error: Failed to download init.lua. Check your connection."
+        exit 1
+    fi
+
+    # download settings.json and place it in destination
+    if ! sudo -u $SUDO_USER curl https://raw.githubusercontent.com/caspermoller/micro/main/settings/settings.json -o "$DESTINATION/settings.json"; then
+        echo "Error: Failed to download settings.json. Check your connection."
+        exit 1
+    fi
+
+    echo "Settings downloaded successfully!"
+#    echo "Folder created"
+}
+
 while [[ "$INSTALL_CHOICE" != "y" && "$INSTALL_CHOICE" != "N" ]]; do
     echo "Invalid input. Please choose either 'y' or 'N'."
     echo "Do you want Micro to be installed automatically? (y/N)"
@@ -63,20 +86,8 @@ if [[ "$INSTALL_CHOICE" == "y" ]]; then
         echo "Micro is already installed. Downloading settings..."
     fi
 
-    # Download Micro settings
-    DESTINATION="$HOME/.config/micro"
-    mkdir -p "$DESTINATION"
-
-    if ! curl -fsSL -o "$DESTINATION/init.lua" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/init.lua"; then
-        echo "Error: Failed to download init.lua. Please check your internet connection or the URL."
-        exit 1
-    fi
-    
-    if ! curl -fsSL -o "$DESTINATION/settings.json" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/settings.json"; then
-        echo "Error: Failed to download settings.json. Please check your internet connection or the URL."
-        exit 1
-    fi
-
+    # Download settings after installation
+    download_settings
     echo "Installation complete! You can now use Micro. Enjoy your editing experience!"
     exit
 
@@ -91,25 +102,8 @@ elif [[ "$INSTALL_CHOICE" == "N" ]]; then
     done
 
     if [[ "$DOWNLOAD_CHOICE" == "y" ]]; then
-        # Define the destination folder
-        DESTINATION="$HOME/.config/micro"
-        
-        # Ensure the destination folder exists
-        mkdir -p "$DESTINATION"
-        
-        # Download the files
-        if ! curl -fsSL -o "$DESTINATION/init.lua" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/init.lua"; then
-            echo "Error: Failed to download init.lua. Please check your internet connection or the URL."
-            exit 1
-        fi
-        
-        if ! curl -fsSL -o "$DESTINATION/settings.json" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/settings.json"; then
-            echo "Error: Failed to download settings.json. Please check your internet connection or the URL."
-            exit 1
-        fi
-        
-        echo "Settings downloaded successfully!"
-        echo "Files located in ~/.config/micro"
+        # Download Micro settings manually
+        download_settings
     elif [[ "$DOWNLOAD_CHOICE" == "N" ]]; then
         echo "Goodbye."
         exit
