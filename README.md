@@ -16,10 +16,7 @@ This script was primarily created for personal use, based on my preferences for 
 ## Installation
 
 1. **Download and run the script:**
-   - **Automatic Micro Installation**: The script downloads and installs Micro if it's not already installed.
-   - **Support for multiple operating systems**: The script can detect and install Micro on macOS, Debian, Arch, Fedora, and OpenSUSE.
-   - **Download default settings**: The script downloads the settings how I like them.
-   - **Check for sudo rights**: The script requires `sudo` for installation and informs the user if they don't have the necessary permissions.
+
    ```bash
    curl https://raw.githubusercontent.com/caspermoller/micro/main/script/micro.sh -o micro_installer.sh 
    sudo bash micro_installer.sh
