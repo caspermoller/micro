@@ -1,12 +1,16 @@
 # Micro Installer Script
 
-This script is designed to easily install the **Micro** text editor on various operating systems (macOS, Debian-based systems like Ubuntu, Arch, Fedora, and OpenSUSE), as well as download and configure the necessary settings for Micro.
+This script is designed to easily install the **Micro** text editor on various operating systems (macOS, Debian-based systems like Ubuntu, Arch, Fedora, and OpenSUSE), as well as download and configure the necessary settings that i like. I may update the settings eventually.
+
+## Disclaimer
+
+This script was primarily created for personal use, based on my preferences for the **Micro** text editor and its settings. However, you are welcome to use it if it fits your needs. I cannot guarantee it will work perfectly in all environments, but feel free to modify it as you see fit.
 
 ## Features
 
 - **Automatic Micro Installation**: The script downloads and installs Micro if it's not already installed.
 - **Support for multiple operating systems**: The script can detect and install Micro on macOS, Debian, Arch, Fedora, and OpenSUSE.
-- **Download default settings**: The script downloads standard Micro settings from an external repository and saves them in the correct directory on your machine.
+- **Download default settings**: The script downloads the settings how I like them.
 - **Check for sudo rights**: The script requires `sudo` for installation and informs the user if they don't have the necessary permissions.
 
 ## Installation
@@ -16,33 +20,18 @@ This script is designed to easily install the **Micro** text editor on various o
    ```bash
    curl https://raw.githubusercontent.com/caspermoller/micro/main/micro.sh -o micro_installer.sh 
    sudo bash micro_installer.sh
-   sudo rm micro_installer.sh
+   sudo rm micro_installer.sh	
    ```
 
-2. **Grant execute permissions to the script:**
-
-   ```bash
-   chmod +x micro-install.sh
-   ```
-
-3. **Run the script:**
-
-   - To run the script, use `sudo`:
-   
-     ```bash
-     sudo ./micro-install.sh
-     ```
-
-4. **Choose installation type**:
+2. **Choose installation type**:
    - When running the script, you will be prompted to choose whether you want to install Micro automatically or only download the settings.
-   
    - If you choose to install Micro automatically, the script will also download the necessary settings for Micro.
 
-5. **Done!** Once the installation is complete, you can start using Micro with the loaded settings.
+3. **Done!** Once the installation is complete, you can start using Micro with the loaded settings.
 
 ## Requirements
 
-- `sudo` (administrator privileges) are required for installation.
+- `sudo` (administrator privileges) are required for installation. The script will not run, if sudo isn't specified.
 - `curl` must be installed on the system to fetch Micro and the settings.
 
 ## Supported Operating Systems
