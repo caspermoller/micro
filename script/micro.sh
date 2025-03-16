@@ -20,9 +20,13 @@ read -r INSTALL_CHOICE
 
 # Function to download settings
 download_settings() {
-    DESTINATION="/home/$SUDO_USER/.config/micro"
+    if [[ "$OS" == "macOS" ]]; then
+        DESTINATION="$HOME/.config/micro"
+    else
+        DESTINATION="/home/$SUDO_USER/.config/micro"
+    fi
+
     # create folder if not exist
-    echo "Echo: $SUDO_USER"
     sudo -u $SUDO_USER mkdir -p "$DESTINATION"
 
     # download init.lua and place it in destination
@@ -38,7 +42,6 @@ download_settings() {
     fi
 
     echo "Settings downloaded successfully!"
-#    echo "Folder created"
 }
 
 while [[ "$INSTALL_CHOICE" != "y" && "$INSTALL_CHOICE" != "N" ]]; do
@@ -112,3 +115,4 @@ else
     echo "Invalid input. Please choose either 'y' or 'N'."
     exit 1
 fi
+
