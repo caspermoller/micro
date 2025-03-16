@@ -4,7 +4,7 @@ This script is designed to easily install the **Micro** text editor on various o
 
 ## Disclaimer
 
-This script was primarily created for personal use, based on my preferences for the **Micro** text editor and its settings. However, you are welcome to use it if it fits your needs. I cannot guarantee it will work perfectly in all environments, but feel free to modify it as you see fit.
+This script was primarily created for personal use, based on my preferences for the **Micro** text editor and its settings. However, you are welcome to use it if it fits your needs. I cannot guarantee it will work perfectly in all environments, but feel free to modify it as you see fit. It's only tested on Mac and a couple of Debian-based Linux distros, bit it should work for other systems as well.
 
 ## Features
 
@@ -38,9 +38,14 @@ This script was primarily created for personal use, based on my preferences for 
 
 - **macOS**
 - **Debian-based systems** (e.g., Ubuntu, Linux Mint, Pop!_OS)
-- **Arch Linux** and derivatives (e.g., Manjaro, EndeavourOS)
-- **Fedora**
-- **OpenSUSE**
+- **Arch Linux** and derivatives (e.g., Manjaro, EndeavourOS) (not tested yet)
+- **Fedora** (not tested yet)
+- **OpenSUSE** (not tested yet)
+
+## To-do list
+
+- **curl:** it's my plan to add a feature that can install curl, if it isn't installed already.
+- **Test:** in the future i'm gonna test the script on Arch, Fedora and OpenSUSE, but as i never used theese systems before, it's not mynumber one priority at the moment.
 
 ## Error Handling
 
