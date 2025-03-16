@@ -16,18 +16,19 @@ This script was primarily created for personal use, based on my preferences for 
 ## Installation
 
 1. **Download and run the script:**
-
+   Make sure that you have installed curl, or the installation will not run.
+   Make sure to run the script as sudo.
    ```bash
    curl https://raw.githubusercontent.com/caspermoller/micro/main/script/micro.sh -o micro_installer.sh 
    sudo bash micro_installer.sh
    sudo rm micro_installer.sh	
    ```
 
-2. **Choose installation type**:
+3. **Choose installation type**:
    - When running the script, you will be prompted to choose whether you want to install Micro automatically or only download the settings.
    - If you choose to install Micro automatically, the script will also download the necessary settings for Micro.
 
-3. **Done!** Once the installation is complete, you can start using Micro with the loaded settings.
+4. **Done!** Once the installation is complete, you can start using Micro with the loaded settings.
 
 ## Requirements
 
