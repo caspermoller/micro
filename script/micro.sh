@@ -67,12 +67,12 @@ if [[ "$INSTALL_CHOICE" == "y" ]]; then
     DESTINATION="$HOME/.config/micro"
     mkdir -p "$DESTINATION"
 
-    if ! curl -fsSL -o "$DESTINATION/init.lua" "https://raw.githubusercontent.com/caspermoller/micro/main/init.lua"; then
+    if ! curl -fsSL -o "$DESTINATION/init.lua" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/init.lua"; then
         echo "Error: Failed to download init.lua. Please check your internet connection or the URL."
         exit 1
     fi
     
-    if ! curl -fsSL -o "$DESTINATION/settings.json" "https://raw.githubusercontent.com/caspermoller/micro/main/settings.json"; then
+    if ! curl -fsSL -o "$DESTINATION/settings.json" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/settings.json"; then
         echo "Error: Failed to download settings.json. Please check your internet connection or the URL."
         exit 1
     fi
@@ -98,12 +98,12 @@ elif [[ "$INSTALL_CHOICE" == "N" ]]; then
         mkdir -p "$DESTINATION"
         
         # Download the files
-        if ! curl -fsSL -o "$DESTINATION/init.lua" "https://raw.githubusercontent.com/caspermoller/micro/main/init.lua"; then
+        if ! curl -fsSL -o "$DESTINATION/init.lua" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/init.lua"; then
             echo "Error: Failed to download init.lua. Please check your internet connection or the URL."
             exit 1
         fi
         
-        if ! curl -fsSL -o "$DESTINATION/settings.json" "https://raw.githubusercontent.com/caspermoller/micro/main/settings.json"; then
+        if ! curl -fsSL -o "$DESTINATION/settings.json" "https://raw.githubusercontent.com/caspermoller/micro/main/settings/settings.json"; then
             echo "Error: Failed to download settings.json. Please check your internet connection or the URL."
             exit 1
         fi
