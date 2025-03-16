@@ -1,6 +1,6 @@
 # Micro Installer Script
 
-This script is designed to easily install the **Micro** text editor on various operating systems (macOS, Debian-based systems like Ubuntu, Arch, Fedora, and OpenSUSE), as well as download and configure the necessary settings that i like. I may update the settings eventually.
+This script is designed to easily install the **Micro** text editor on various operating systems (macOS, Debian-based systems like Ubuntu, Arch, Fedora, and OpenSUSE), as well as download and configure the necessary settings that I like. I may update the settings eventually.
 
 ## Disclaimer
 
