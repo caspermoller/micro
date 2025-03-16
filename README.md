@@ -11,11 +11,12 @@ This script is designed to easily install the **Micro** text editor on various o
 
 ## Installation
 
-1. **Clone the script to your local machine:**
+1. **Download and run the script:**
 
    ```bash
-   git clone https://github.com/your-username/micro-installer.git
-   cd micro-installer
+   curl https://raw.githubusercontent.com/caspermoller/micro/main/micro.sh -o micro_installer.sh 
+   sudo bash micro_installer.sh
+   sudo rm micro_installer.sh
    ```
 
 2. **Grant execute permissions to the script:**
