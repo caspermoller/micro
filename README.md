@@ -16,8 +16,8 @@ This script was primarily created for personal use, based on my preferences for 
 ## Installation
 
 1. **Download and run the script:**
-   Make sure that you have installed curl, or the installation will not run.
-   Make sure to run the script as sudo.
+   - Make sure that you have installed curl, or the installation will not run.
+   - Make sure to run the script as sudo.
    ```bash
    curl https://raw.githubusercontent.com/caspermoller/micro/main/script/micro.sh -o micro_installer.sh 
    sudo bash micro_installer.sh
