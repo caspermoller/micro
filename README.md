@@ -13,6 +13,11 @@ This script was primarily created for personal use, based on my preferences for 
 - **Download default settings**: The script downloads the settings how I like them.
 - **Check for sudo rights**: The script requires `sudo` for installation and informs the user if they don't have the necessary permissions.
 
+## Requirements
+
+- `sudo` (administrator privileges) are required for installation. The script will not run, if sudo isn't specified.
+- `curl` must be installed on the system to fetch Micro and the settings.
+
 ## Installation
 
 1. **Download and run the script:**
@@ -29,10 +34,6 @@ This script was primarily created for personal use, based on my preferences for 
 
 4. **Done!** Once the installation is complete, you can start using Micro with the loaded settings.
 
-## Requirements
-
-- `sudo` (administrator privileges) are required for installation. The script will not run, if sudo isn't specified.
-- `curl` must be installed on the system to fetch Micro and the settings.
 
 ## Supported Operating Systems
 
