@@ -18,7 +18,7 @@ This script was primarily created for personal use, based on my preferences for 
 1. **Download and run the script:**
 
    ```bash
-   curl https://raw.githubusercontent.com/caspermoller/micro/main/micro.sh -o micro_installer.sh 
+   curl https://raw.githubusercontent.com/caspermoller/micro/main/script/micro.sh -o micro_installer.sh 
    sudo bash micro_installer.sh
    sudo rm micro_installer.sh	
    ```
